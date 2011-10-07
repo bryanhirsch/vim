@@ -5,10 +5,11 @@ set incsearch
 noremap < <gv
 noremap > >gv
 " mapping
-"map fp :syntax enable<enter>:set syntax=php<enter>
-"map fj :syntax enable<enter>:set syntax=javascript<enter>
-"map fh :syntax enable<enter>:set syntax=html<enter>
-"map ft :syntax enable<enter>:set syntax=text<enter>
+map fp :syntax enable<enter>:set syntax=php<enter>
+map fr :syntax enable<enter>:set syntax=ruby<enter>
+map fj :syntax enable<enter>:set syntax=javascript<enter>
+map fh :syntax enable<enter>:set syntax=html<enter>
+map ft :syntax enable<enter>:set syntax=text<enter>
 " fold
 set foldcolumn=4
 set foldmethod=indent
@@ -40,7 +41,7 @@ set smartindent
 " http://www.vim.org/scripts/download_script.php?src_id=11538
 "   :AcpEnable
 " see Vim Hacks 101, p 149
-filetype plugin on
+" filetype plugin on
 
 " More autocomplete (although this may be redundant with the previous
 " command).
@@ -97,7 +98,7 @@ endif
  endif
 
 " Use hook list from file generated above as a thesaurus.
-set thesaurus+=~/.vim/drupal6hooks.txt
+" set thesaurus+=~/.vim/drupal6hooks.txt
 
 " Create a dictionary of functions in a drupal installation like this: 
 "   grep "^function" modules/ includes/ -hR | gawk '{ sub(/\(.+/, "(", $2);
@@ -105,4 +106,4 @@ set thesaurus+=~/.vim/drupal6hooks.txt
 " Then tell .vimrc to look at this dictionary (see below). Use <ctrl>x<ctrl>k
 " to call up option list.
 " http://www.thingy-ma-jig.co.uk/blog/18-08-2009/drupal-autocomplete-vim
-set dict +=~/.vim/dictionaries/drupal6.dict
+" set dict +=~/.vim/dictionaries/drupal6.dict
