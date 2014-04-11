@@ -1,6 +1,14 @@
 " BH
+"
+" misc notes:
+"  - find trailing whitespace:          /\s\+$
+"  - delete all trailing whitespace:    :%s/\s\+$//
+"
+"
+set backspace=indent,eol,start
 set number
 set incsearch
+syntax on
 " intent 
 noremap < <gv
 noremap > >gv
@@ -10,9 +18,20 @@ map fr :syntax enable<enter>:set syntax=ruby<enter>
 map fj :syntax enable<enter>:set syntax=javascript<enter>
 map fh :syntax enable<enter>:set syntax=html<enter>
 map ft :syntax enable<enter>:set syntax=text<enter>
+map snon :set nonumber
+map sn :set number
+map f0 :set foldcolumn=0
+map f4 :set foldcolumn=4
+map tw0 :set textwidth=0
+map tw80 :set textwidth=80
+map sp :set paste
+map snp :set nopaste
+
+
 " fold
 set foldcolumn=4
 set foldmethod=indent
+set textwidth=80
 
 " Drupal
 set expandtab
